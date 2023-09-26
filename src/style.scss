@@ -1,41 +1,42 @@
+@import "./styles/vars";
 .header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  min-height: 950px;
+  padding-top: 10px;
+  //padding-bottom: 50px;
+  min-height: 840px;
   background-image: url("./../public/img/bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
-  .header__top-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    h1 {
-      font-size: 48px;
-      font-weight: 700;
-      color: $accent;
-      cursor: text;
-    }
-
-  }
-  .nav {
-    font-size: 20px;
-
-    .nav__list {
-      display: flex;
-      column-gap: 40px;
-    }
-  }
-
   .header__title {
     font-size: 26px;
     text-align: center;
-    padding-bottom: -160px;
+    //padding-bottom: -160px;
   }
 
 }
+.header__top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: $accent;
+    cursor: text;
+  }
 
+}
+.nav {
+  font-size: 20px;
 
+  .nav__list {
+    display: flex;
+    column-gap: 40px;
+  }
+}
+.link-active {
+  color: $accent;
+}

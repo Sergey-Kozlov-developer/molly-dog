@@ -1,6 +1,9 @@
 function Blog() {
 	return (
-		<div>Blog</div>
+		<div className="container">
+			<div>Blog</div>
+		</div>
+
 	);
 }
 export default Blog;
