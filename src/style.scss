@@ -5,10 +5,14 @@
   justify-content: space-between;
   padding-top: 10px;
   //padding-bottom: 50px;
-  min-height: 840px;
-  background-image: url("./../public/img/bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  //min-height: 840px;
+  //background-image: url("./../public/img/bg.jpg");
+  //background-repeat: no-repeat;
+  //background-position: center;
+  .bg__home {
+    padding-top: 50px;
+    margin-bottom: 30px;
+  }
 
   .header__title {
     font-size: 26px;

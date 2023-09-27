@@ -1,7 +1,10 @@
+import Index from "./Card/index.jsx";
+
 function Blog() {
 	return (
-		<div className="container">
-			<div>Blog</div>
+		<div>
+			{/*<div>Blog</div>*/}
+			<Index/>
 		</div>
 
 	);
