@@ -1,11 +1,10 @@
-import bgImage from './../../public/img/bg.jpg'
-function Header() {
+import bgImage from './../assets/img/bg.jpg';
+function Home() {
 	return (
 
 		<header className="header">
-			{/*<NavBar />*/}
-			<div className="header__top">
-			</div>
+			{/*<div className="header__top">*/}
+			{/*</div>*/}
 			<div className="container">
 				<div className="bg__home">
 					<img className="bg__logo" src={bgImage} alt="BG"/>
@@ -20,4 +19,4 @@ function Header() {
 	);
 }
 
-export default Header;
+export default Home;

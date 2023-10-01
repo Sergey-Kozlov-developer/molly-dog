@@ -1,9 +1,10 @@
-import Header from "../components/Header.jsx";
+import Home from "../components/Home.jsx";
 import './../style.scss'
-import {Route, Router, Routes} from "react-router";
+import {Route, Routes} from "react-router";
 import Blog from "../components/Blog.jsx";
 import Contacts from "../components/Contacts.jsx";
-import {Link, NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import logoImg from '../assets/img/logo/mollyLogo.png';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
 		<>
 			<div className="container">
 				<div className="header__top-row">
-					<h1>Molly Dog</h1>
+					<img src={logoImg} alt="Logo" />
 					{/*<img src="/img/logo.png" alt="Logo"/>*/}
 					<div className="header__nav">
 						<div className="nav">
@@ -37,8 +38,9 @@ function App() {
 
 			</div>
 
+
 			<Routes>
-				<Route path="/" element={<Header/>}/>
+				<Route path="/" element={<Home/>}/>
 				<Route path="/blog" element={<Blog/>}/>
 				<Route path="/contacts" element={<Contacts/>}/>
 			</Routes>

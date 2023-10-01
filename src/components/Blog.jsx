@@ -1,10 +1,13 @@
-import Index from "./Card/index.jsx";
+import Card from "./Card/index.jsx";
 
 function Blog() {
 	return (
 		<div>
-			{/*<div>Blog</div>*/}
-			<Index/>
+			<Card/>
+			<Card/>
+			<Card/>
+			<Card/>
+			<Card/>
 		</div>
 
 	);
