@@ -1,6 +1,7 @@
 import Card from './Card/Card.jsx';
 // import posts from './../assets/post.json';
 import { useEffect, useState } from 'react';
+import Categories from './Categories.jsx';
 
 function Blog() {
   const [posts, setPosts] = useState([]);
@@ -12,7 +13,8 @@ function Blog() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
+      <Categories />
       {posts.map((post, id) => (
         <Card key={post.id} {...post} />
       ))}
