@@ -1,6 +1,16 @@
 import Card from './Card/Card.jsx';
-import posts from './../assets/post.json';
+// import posts from './../assets/post.json';
+import { useEffect, useState } from 'react';
+
 function Blog() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch('https://api.npoint.io/8f2b45c494982151a094')
+      .then((res) => res.json())
+      .then((arrPosts) => setPosts(arrPosts));
+  }, []);
+
   return (
     <div>
       {posts.map((post, id) => (
@@ -9,4 +19,5 @@ function Blog() {
     </div>
   );
 }
+
 export default Blog;
