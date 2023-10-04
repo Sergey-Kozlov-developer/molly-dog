@@ -1,5 +1,5 @@
-import bgImage from './../assets/img/bg.jpg';
-function Home() {
+import bgImage from '../assets/img/bg.jpg';
+export const Home = () => {
   return (
     <header className="header">
       <div className="container">
@@ -16,6 +16,6 @@ function Home() {
       </div>
     </header>
   );
-}
+};
 
 export default Home;
