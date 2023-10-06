@@ -1,7 +1,9 @@
 import logoImg from '../assets/img/logo/mollyLogo.png';
 import { Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
 
 function Navigation() {
+  const [menuActive, setMenuActive] = useState(false);
   const routes = [
     {
       to: '/',
@@ -19,9 +21,13 @@ function Navigation() {
   return (
     <div className="header__top-row">
       <Link to="/">
-        <img src={logoImg} alt="Logo" />
+        <img
+          className={menuActive ? 'header__nav' : ''}
+          src={logoImg}
+          alt="Logo"
+        />
       </Link>
-      <div className="header__nav">
+      <div className={menuActive ? 'nav-icon-btn' : 'header__nav'}>
         <div className="nav">
           <ul className="nav__list">
             {routes.map((route, index) => (
@@ -40,7 +46,10 @@ function Navigation() {
       </div>
       {/*кнопка под мобильную и планшетную версию*/}
       <div className="header__nav-btn">
-        <button className="nav-icon-btn">
+        <button
+          onClick={() => setMenuActive(!menuActive)}
+          className="nav-icon-btn"
+        >
           <div className="nav-icon"></div>
         </button>
       </div>
