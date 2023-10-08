@@ -7,27 +7,34 @@ import Card from '../components/Card/index.jsx';
 
 export const Blog = () => {
   // useState получение поста
-  const [posts, setPosts] = useState([]);
+  const [items, setPosts] = useState([]);
   // useState подгрузка placeholder
   const [isLoading, setIsLoading] = useState(true);
+  // state асктивной категории
+  const [categoryId, setCategoryId] = useState(0);
 
   useEffect(() => {
-    fetch('https://api.npoint.io/8f2b45c494982151a094')
+    setIsLoading(true);
+    const category = categoryId > 0 ? `category=${categoryId}` : '';
+    fetch(`https://65226adaf43b179384147b19.mockapi.io/items?${category}`)
       .then((res) => res.json())
       .then((arrPosts) => {
         setPosts(arrPosts);
         setIsLoading(false);
       });
-  }, []);
+  }, [categoryId]);
 
   return (
     <div className="container">
-      <Categories />
+      <Categories
+        value={categoryId}
+        onChangeCategory={(index) => setCategoryId(index)}
+      />
       {/*грузим  плайсхолдер*/}
       {isLoading ? (
         <Skeleton />
       ) : (
-        posts.map((element, id) => <Card key={element.id} {...element} />)
+        items.map((element, id) => <Card key={element.id} {...element} />)
       )}
     </div>
   );
