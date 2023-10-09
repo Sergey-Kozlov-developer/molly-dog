@@ -31,7 +31,7 @@
 
   @include mediaTablet {
     min-height: unset;
-    row-gap: 50px;
+    row-gap: 30px;
   }
 
 }
@@ -123,6 +123,7 @@
   .nav__list {
     display: flex;
     column-gap: 40px;
+
 
     @media (max-width: 391px) {
       column-gap: 20px;

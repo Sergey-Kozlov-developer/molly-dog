@@ -15,7 +15,7 @@ function Navigation() {
     },
     {
       to: '/contacts',
-      page: 'О нас',
+      page: 'Инфо',
     },
   ];
   return (

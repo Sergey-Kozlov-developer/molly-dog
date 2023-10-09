@@ -1,8 +1,4 @@
 @import "../../scss/vars";
-//a {
-//  color: #fff;
-//  text-decoration: none;
-//}
 
 .social {
   position: fixed;
@@ -10,12 +6,12 @@
   z-index: 9;
 }
 .social ul {
-  padding: 0;
+  padding: 0px;
   transform: translate(-270px, 0);
 }
 .social ul li {
   display: block;
-  margin: 5px;
+  margin: 24px;
   background: rgba(0, 0, 0, 0.36);
   width: 300px;
   text-align: right;
@@ -25,26 +21,27 @@
 }
 .social ul li:hover {
   transform: translate(110px, 0);
-  background: rgba(204, 202, 202, 0.4);
+  background: rgba(206, 206, 206, 0.4);
 }
 .social ul li:hover a {
   color: $accent;
 }
 .social ul li:hover i {
   color: $accent;
-  background: rgba(0, 0, 0, 0.36);
+  //background: rgba(0, 0, 0, 0.36);
+  background: #fff;
   transform: rotate(360deg);
   transition: all 1s;
 }
 .social ul li i {
   margin-left: 10px;
   color: #000;
-  background: #fff;
+  //background: #fff;
   padding: 10px;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   font-size: 20px;
-  background: $accent;
+  background: white;
   transform: rotate(0deg);
 }
