@@ -7,29 +7,16 @@
   margin: 0 auto;
   display: inline-block;
 
-  //justify-content: center;
-  //align-items: center;
 
 }
-//
-//.cards {
-//  display: flex;
-//  flex-wrap: wrap;
-//  flex-direction: row;
-//  justify-content: space-between;
-//  list-style: none;
-//  align-items: center;
-//  margin: 0;
-//  padding: 0;
-//
-//
-//}
+
 
 .cards_item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem;
+
 }
 
 .card {

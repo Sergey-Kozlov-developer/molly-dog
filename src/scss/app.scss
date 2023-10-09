@@ -107,7 +107,7 @@
 // отображение кнопки навигации при планшете
 .header__nav-btn {
   display: none;
-  padding-right: 10px;
+  padding-right: 20px;
 
   @include mediaTablet {
     display: block;
@@ -147,7 +147,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //padding-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .nav-icon {

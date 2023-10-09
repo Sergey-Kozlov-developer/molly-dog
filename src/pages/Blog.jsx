@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Categories from '../components/Categories.jsx';
 import Skeleton from './Skeleton.jsx';
 import Card from '../components/Card/index.jsx';
+import ContactsBlock from '../components/ContactsBlock/index.jsx';
 
 export const Blog = () => {
   // useState получение поста
@@ -25,18 +26,20 @@ export const Blog = () => {
   }, [categoryId]);
 
   return (
-    <div className="container">
-      <Categories
-        value={categoryId}
-        onChangeCategory={(index) => setCategoryId(index)}
-      />
-      {/*грузим  плайсхолдер*/}
-      {isLoading ? (
-        <Skeleton />
-      ) : (
-        items.map((element, id) => <Card key={element.id} {...element} />)
-      )}
-    </div>
+    <>
+      <div className="container">
+        <Categories
+          value={categoryId}
+          onChangeCategory={(index) => setCategoryId(index)}
+        />
+        {/*грузим  плайсхолдер*/}
+        {isLoading ? (
+          <Skeleton />
+        ) : (
+          items.map((element, id) => <Card key={element.id} {...element} />)
+        )}
+      </div>
+    </>
   );
 };
 

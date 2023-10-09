@@ -7,10 +7,12 @@ import Navigation from './components/Navigation.jsx';
 
 import { Route, Routes } from 'react-router';
 import { NotFound } from './pages/NotFound.jsx';
+import ContactsBlock from './components/ContactsBlock/index.jsx';
 
 function App() {
   return (
     <>
+      <ContactsBlock />
       <div className="container">
         <Navigation />
       </div>
