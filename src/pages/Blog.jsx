@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Categories from '../components/Categories.jsx';
 import Skeleton from './Skeleton.jsx';
 import Card from '../components/Card/index.jsx';
-import ContactsBlock from '../components/ContactsBlock/index.jsx';
+import ContactsBlock from '../components/SocialMedia/index.jsx';
 
 export const Blog = () => {
   // useState получение поста
