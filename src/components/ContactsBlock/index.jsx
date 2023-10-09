@@ -1,7 +1,7 @@
-import styles from './ContactsBlock.module.scss';
+import styles from './SocialMedia.module.scss';
 import { Link } from 'react-router-dom';
 
-function ContactsBlock() {
+function SocialMedia() {
   return (
     <>
       <nav className={styles.social}>
@@ -30,4 +30,4 @@ function ContactsBlock() {
   );
 }
 
-export default ContactsBlock;
+export default SocialMedia;
