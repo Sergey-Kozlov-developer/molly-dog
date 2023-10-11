@@ -1,9 +1,8 @@
-import './../scss/components/_categories.scss';
-import { useState } from 'react';
+import "./../scss/components/_categories.scss";
 
+// eslint-disable-next-line react/prop-types
 function Categories({ value, onChangeCategory }) {
-
-  const categories = ['Все', 'Молли', 'Дрессировка', 'Трюки', 'Статьи'];
+  const categories = ["Все", "Молли", "Дрессировка", "Трюки", "Статьи"];
   // функция меняющая активное состояние
   // const onClickCategory = (index) => {
   //   setActiveIndex(index);
@@ -15,7 +14,7 @@ function Categories({ value, onChangeCategory }) {
           <li
             key={index}
             onClick={() => onChangeCategory(index)}
-            className={value === index ? 'active' : ''}
+            className={value === index ? "active" : ""}
           >
             {categoryName}
           </li>

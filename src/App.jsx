@@ -1,13 +1,13 @@
-import './scss/app.scss';
+import "./scss/app.scss";
 
-import Home from './pages/Home.jsx';
-import Blog from './pages/Blog.jsx';
-import Contacts from './pages/Contacts.jsx';
-import Navigation from './components/Navigation.jsx';
+import Home from "./pages/Home.jsx";
+import Blog from "./pages/Blog.jsx";
+import Contacts from "./pages/Contacts.jsx";
+import Navigation from "./components/Navigation.jsx";
 
-import { Route, Routes } from 'react-router';
-import { NotFound } from './pages/NotFound.jsx';
-import SocialMedia from './components/SocialMedia/index.jsx';
+import { Route, Routes } from "react-router";
+import { NotFound } from "./pages/NotFound.jsx";
+import SocialMedia from "./components/SocialMedia/index.jsx";
 
 function App() {
   return (
