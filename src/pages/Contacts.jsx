@@ -1,5 +1,3 @@
-import ContactsBlock from '../components/SocialMedia/index.jsx';
-
 export const Contacts = () => {
   return (
     <>

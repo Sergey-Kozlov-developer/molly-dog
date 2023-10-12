@@ -1,4 +1,5 @@
 import "./../scss/components/_categories.scss";
+import { motion } from "framer-motion";
 
 // eslint-disable-next-line react/prop-types
 function Categories({ value, onChangeCategory }) {
@@ -11,13 +12,14 @@ function Categories({ value, onChangeCategory }) {
     <div className="categories">
       <ul>
         {categories.map((categoryName, index) => (
-          <li
+          <motion.li
+            whileTap={{ scale: 1.2 }}
             key={index}
             onClick={() => onChangeCategory(index)}
             className={value === index ? "active" : ""}
           >
             {categoryName}
-          </li>
+          </motion.li>
         ))}
       </ul>
     </div>

@@ -1,18 +1,32 @@
-import bgImage from '../assets/img/bg.jpg';
+import bgImage from "../assets/img/bg.jpg";
+import { motion } from "framer-motion";
+
 export const Home = () => {
   return (
     <header className="header">
       <div className="container">
         <div className="bg__home">
-          <img className="bg__logo" src={bgImage} alt="BG" />
+          <motion.img
+            className="bg__logo"
+            src={bgImage}
+            alt="BG"
+            initial={{ x: 1300 }}
+            animate={{ x: 0 }}
+            transition={{ delay: 0.5 }}
+          />
         </div>
-        <h1 className="header__title">
+        <motion.h1
+          className="header__title"
+          initial={{ x: -1300 }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.5 }}
+        >
           Жизнь с собакой в квартире – это увлекательный,
           <br /> интересный и познавательный процесс.
           <br />
           <br />
           Блог о нашей собаке Молли.
-        </h1>
+        </motion.h1>
       </div>
     </header>
   );

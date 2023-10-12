@@ -1,14 +1,25 @@
-import styles from './Card.module.scss';
-import { Link } from 'react-router-dom';
+import styles from "./Card.module.scss";
+import { motion } from "framer-motion";
 
 function Card({ imageUrl, title, subTitle, description, date }) {
   return (
     <div className={styles.blog}>
       <div className={styles.cards_item}>
-        <div className={styles.card}>
+        <motion.div
+          className={styles.card}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.5 }}
+        >
           <div className={styles.card_image}>
             <span className={styles.note}>&copy;Molly</span>
-            <img src={imageUrl} alt="Dog" />
+            <motion.img
+              src={imageUrl}
+              alt="Dog"
+              // initial={{ scale: 0 }}
+              // animate={{ scale: 1 }}
+              // transition={{ delay: 0.5 }}
+            />
             <span className={styles.card_price}>{date}</span>
           </div>
           <div className={styles.card_content}>
@@ -19,7 +30,7 @@ function Card({ imageUrl, title, subTitle, description, date }) {
               <p>{description}</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
