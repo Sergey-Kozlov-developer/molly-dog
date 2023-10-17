@@ -5,6 +5,7 @@ import Skeleton from "./Skeleton.jsx";
 import Card from "../components/Card/index.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { setCategoryId } from "../redux/slices/filterSlice.js";
+import axios from "axios";
 
 export const Blog = () => {
   // useState получение поста
@@ -23,12 +24,15 @@ export const Blog = () => {
   useEffect(() => {
     setIsLoading(true);
     const category = categoryId > 0 ? `category=${categoryId}` : "";
-    fetch(`https://65226adaf43b179384147b19.mockapi.io/items?${category}`)
-      .then((res) => res.json())
-      .then((arrItems) => {
-        setItems(arrItems);
-        setIsLoading(false);
-      });
+    axios
+      .get(`https://65226adaf43b179384147b19.mockapi.io/items?${category}`)
+      .then(
+        (res) => {
+          setItems(res.data);
+          setIsLoading(false);
+        },
+        [categoryId]
+      );
   }, [categoryId]);
 
   return (
