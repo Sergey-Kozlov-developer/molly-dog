@@ -16,20 +16,32 @@ export default defineConfig({
                 theme_color: "#ffffff",
                 icons: [
                     {
-                        src: "images/android-icon-192x192.png",
+                        src: "pwa-64x64.png",
+                        sizes: "64x64",
+                        type: "image/png",
+                    },
+                    {
+                        src: "pwa-192x192.png",
                         sizes: "192x192",
                         type: "image/png",
                     },
                     {
-                        src: "images/ms-310x310.png",
-                        sizes: "310x310",
+                        src: "pwa-512x512.png",
+                        sizes: "512x512",
                         type: "image/png",
+                        purpose: "any",
+                    },
+                    {
+                        src: "maskable-icon-512x512.png",
+                        sizes: "512x512",
+                        type: "image/png",
+                        purpose: "maskable",
                     },
                 ],
             },
-            devOptions: {
-                enabled: true,
-            },
+            // devOptions: {
+            //     enabled: true,
+            // },
         }),
     ],
 });
